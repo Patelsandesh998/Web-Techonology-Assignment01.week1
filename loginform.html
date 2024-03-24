@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+    .input-container {
+    display: flex;
+    display: inline-block; 
+   margin-left: 30px;
+   margin-top: 15px;
+    
+}
+</style>
+</head>
+<body>
+
+<section id="login">
+    <h1 style="color: #1687b8;"><b>LOGIN</b></h1>
+    <h2 style="color:#7044b8;">Enter login Details</h2>
+    <form id="loginForm" action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username or Email_id:" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password:" required>
+        <br><br>
+        <div class="input-container">
+            <input type="submit" value="Submit">
+        </div>
+        <div class="input-container">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+    <div id="loginMessage"></div>
+</section>
+
+<h1 id="loginHeading" style="color: #1687b8; cursor: pointer;"><b>LOGIN</b></h1>
+
+<script>
+    // Get the login form and login heading elements
+    const loginForm = document.getElementById('login');
+    const loginHeading = document.getElementById('loginHeading');
+
+    // Add click event listener to the login heading
+    loginHeading.addEventListener('click', () => {
+        // Toggle the display of the login form
+        loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>

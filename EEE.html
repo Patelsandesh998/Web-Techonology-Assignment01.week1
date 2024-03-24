@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EEE TextBooks</title>
+<style>
+    .EEE {
+        display: none; /* Hide the EEE section initially */
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 70%;
+        height: 70%;
+    }
+    .EEE {
+    background-color:#9b4dbd;
+}
+.EEE-footer {
+
+color: #fff;
+text-align: center;
+padding: 10px 0;
+background-color: #333;
+}
+</style>
+</head>
+<body>
+
+<div class="EEE">
+    <header>
+        <h1>Electronics and Electronic Engineering</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><b>Concepts in Electric Circuits</b></li>
+            <li><b>Introduction to Electronic Engineering</b></li>
+            <li><b>Electrical Power</b></li>
+        </ul>
+    </nav>
+    <div class="EEE-footer">
+        <footer>
+            <p>&copy; 2024 EEE TextBooks</p>
+        </footer>
+    </div>
+</div>
+
+<h1 id="EEEHeading" style="color: #1687b8; cursor: pointer;"><b>EEE</b></h1>
+
+<script>
+    const eeeSection = document.querySelector('.EEE');
+    const EEEHeading = document.getElementById('EEEHeading');
+
+    EEEHeading.addEventListener('click', () => {
+        eeeSection.style.display = eeeSection.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>

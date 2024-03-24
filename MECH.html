@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MECH TextBooks</title>
+<style>
+    .MECH {
+        display: none; /* Hide the MECH section initially */
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 70%;
+        height: 70%;
+    }
+    .MECH {
+    background-color: yellow;
+}
+footer {
+    background-color: #333;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="MECH">
+    <header>
+        <h1>Mechanical Engineering</h1>
+    </header>
+    <nav>
+        <ol type="I">
+            <li><b>Theory of Machines</b></li>
+            <li><b>Automation and Robotics</b></li>
+            <li><b>Engineering Fluid Mechanics</b></li>
+        </ol>
+    </nav>
+    <div class="MECH-footer">
+        <footer>
+            <p>&copy; 2024 MECH TextBooks</p>
+        </footer>
+    </div>
+</div>
+
+<h1 id="MECHHeading" style="color: #1687b8; cursor: pointer;"><b>MECH</b></h1>
+
+<script>
+    const mechSection = document.querySelector('.MECH');
+    const MECHHeading = document.getElementById('MECHHeading');
+
+    MECHHeading.addEventListener('click', () => {
+        mechSection.style.display = mechSection.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>

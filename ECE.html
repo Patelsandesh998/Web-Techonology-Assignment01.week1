@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECE TextBooks</title>
+<style>
+    .ECE {
+        display: none; /* Hide the ECE section initially */
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 70%;
+        height: 70%;
+    }
+    .ECE {
+    background-color: #ba72b2;
+}
+
+.ECE-footer {
+
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ba72b2;
+}
+footer {
+    background-color: #333;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="ECE">
+    <header>
+        <h1>Electronics and Communication Engineering</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><b>Digital Circuits</b></li>
+            <li><b>Signals and Systems</b></li>
+            <li><b>Digital Communication</b></li>
+        </ul>
+    </nav>
+    <div class="ECE-footer">
+        <footer>
+            <p>&copy; 2024 ECE TextBooks </p>
+        </footer>
+    </div>
+</div>
+
+<h1 id="ECEHeading" style="color: #1687b8; cursor: pointer;"><b>ECE</b></h1>
+
+<script>
+    const eceSection = document.querySelector('.ECE');
+    const ECEHeading = document.getElementById('ECEHeading');
+
+    ECEHeading.addEventListener('click', () => {
+        eceSection.style.display = eceSection.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>

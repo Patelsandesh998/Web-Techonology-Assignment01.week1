@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSE Textbooks</title>
+</head>
+<style>
+    .CSE-group {
+    margin-bottom: 20px;
+}
+.CSE-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.CSE-group input[type="number"], select {
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+ 
+    box-sizing: border-box;
+}
+#ok {
+    height: 30px;
+    width:50px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#ok:hover {
+    background-color:red;
+}
+.CSE {
+    background-color: aqua;
+}
+footer {
+    background-color: #333;
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+     
+}
+
+</style>
+<body>
+
+<div class="CSE" style="display: none;">
+    <header>
+        <h1>Computer Science and Engineering (CSE)</h1>
+    </header>
+    
+    <main>
+        <div class="CSE-group">
+            <label for="book">Text Books:</label>
+            <select id="book" name="book">
+                <option value="Web-Technology">Web-Technology</option>
+                <option value="DAA">DAA</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Data-structure">Data-structure</option>
+                <option value="C++">C++</option>
+            </select>
+        </div>
+        <div class="CSE-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="Quantity:">
+        </div>
+      
+       <button id="calculateTotal">ok</button>
+       <br>
+       <p id="totalCostInfo">Cost of one book is "500" + shipping "1000"</p>
+       <p id="totalCost"></p>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 CSE Textbooks</p>
+    </footer>
+</div>
+
+<h1 id="CSEHeading" style="color: #1687b8; cursor: pointer;"><b>CSE</b></h1>
+
+<script>
+    const cseForm = document.querySelector('.CSE');
+    const CSEHeading = document.getElementById('CSEHeading');
+
+    CSEHeading.addEventListener('click', () => {
+        cseForm.style.display = cseForm.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+
+</body>
+</html>
+

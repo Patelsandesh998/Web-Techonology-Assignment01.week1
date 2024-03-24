@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Catalogue</title>
+<style>
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ec8b8b; 
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+
+
+header, main, footer {
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1 id="catalogueHeading" style="color: #1687b8; cursor: pointer;"><b>Catalogue</b></h1>
+
+<table id="bookCatalogue" border="2">
+    <tr>
+        <th>Book</th>
+        <th>Author</th>
+        <th>Publication</th>
+        <td>Number of Book</td>
+        <th>Add to Cart</th>
+    </tr>
+    <tr>
+        <td>Web Technologies</td>
+        <td>Uttam K. Ray</td>
+        <td>Oxford University Press</td>
+        <td>531</td>
+        <td><button onclick="addToCart('Web Technologies')">Add to cart</button></td>
+    </tr>
+    <tr>
+        <td>PHP & MySQL Web Development</td>
+        <td>Lake Welling & Laura Thomp</td>
+        <td>PEARSON</td>
+        <td>898</td>
+        <td><button onclick="addToCart('PHP & MySQL Web Development')">Add to cart</button></td>
+    </tr>
+</table>
+
+<script>
+   
+    const bookCatalogue = document.getElementById('bookCatalogue');
+    const catalogueHeading = document.getElementById('catalogueHeading');
+
+
+    catalogueHeading.addEventListener('click', () => {
+       
+        bookCatalogue.style.display = bookCatalogue.style.display === 'none' ? 'block' : 'none';
+    });
+
+   
+    function addToCart(bookName) {
+        alert(`Added ${bookName} to cart!`);
+    }
+</script>
+
+</body>
+</html>
